@@ -1,0 +1,1374 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Reproducible Research</title>
+  <meta charset="utf-8">
+  <meta name="description" content="Reproducible Research">
+  <meta name="author" content="Adam J Sullivan">
+  <meta name="generator" content="slidify" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/default.css" media="all" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/phone.css" 
+    media="only screen and (max-device-width: 480px)" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/slidify.css" >
+  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/github.css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  <link rel=stylesheet href="libraries/widgets/quiz/css/demo.css"></link>
+<link rel=stylesheet href="libraries/widgets/bootstrap/css/bootstrap.css"></link>
+<link rel=stylesheet href="libraries/widgets/interactive/css/aceeditor.css"></link>
+<link rel=stylesheet href="./assets/css/ribbons.css"></link>
+<link rel=stylesheet href="./assets/css/style.css"></link>
+
+  
+  <!-- Grab CDN jQuery, fall back to local if offline -->
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+  <script>window.jQuery || document.write('<script src="libraries/widgets/quiz/js/jquery.js"><\/script>')</script> 
+  <script data-main="libraries/frameworks/io2012/js/slides" 
+    src="libraries/frameworks/io2012/js/require-1.0.8.min.js">
+  </script>
+  
+  
+
+</head>
+<body style="opacity: 0">
+  <slides class="layout-widescreen">
+    
+    <!-- LOGO SLIDE -->
+      <slide class="nobackground">
+    <article class="flexbox vcenter">
+      <span>
+        <img width='300px' src="assets/img/publichealthlogo.png">
+      </span>
+    </article>
+  </slide>
+    <slide class="title-slide segue nobackground">
+  <aside class="gdbar">
+    <img src="assets/img/publichealthlogo.png">
+  </aside>
+  <hgroup class="auto-fadein">
+    <h1>Reproducible Research</h1>
+    <h2>What is it and How can we do it?</h2>
+    <p>Adam J Sullivan<br/>Assistant Professor of Biostatistics<br/>Brown University</p>
+  </hgroup>
+  <article></article>  
+</slide>
+    
+
+    <!-- SLIDES -->
+    <slide class="segue" id="slide-1" style="background:grey;">
+  <hgroup>
+    <h1>About Me</h1>
+    <hr>
+  </hgroup>
+  <article data-timings="">
+    
+    
+    <footer class = 'logo'>
+<div style="position: absolute; left: 900px; top: 600px; z-index:100">
+<img src = "assets/img/publichealthlogo.png" height="100" >
+</div>
+</footer>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-2" style="background:;">
+  <article data-timings="">
+    
+<div style='float:left;width:48%;' class='centered'>
+  <h2>Current Position</h2>
+
+<ul>
+<li>Adam J Sullivan</li>
+<li>Assistant Professor of Biostatistics (2015-Present)</li>
+<li>Director of Masters Programs in Biostatistics</li>
+<li>Faculty Statistician for the Hassenfeld Child Health Innovation Institute</li>
+</ul>
+
+</div>
+<div style='float:right;width:48%;'>
+  <p><center>
+<img src="./assets/img/brown-logo.png" style="height:400px">
+</center></p>
+
+</div>
+    
+    <footer class = 'logo'>
+<div style="position: absolute; left: 900px; top: 600px; z-index:100">
+<img src = "assets/img/publichealthlogo.png" height="100" >
+</div>
+</footer>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-3" style="background:;">
+  <hgroup>
+    <h2>Education</h2>
+    <hr>
+  </hgroup>
+  <article data-timings="">
+    
+<div style='float:left;width:48%;' class='centered'>
+  <ul>
+<li>BA in Mathematics and Adolscent Education</li>
+<li>2003</li>
+<li>Houghton College</li>
+</ul>
+
+</div>
+<div style='float:right;width:48%;'>
+  <p><center>
+<img src="./assets/img/houghton-logo.jpg" style="height:400px">
+</center></p>
+
+</div>
+    
+    <footer class = 'logo'>
+<div style="position: absolute; left: 900px; top: 600px; z-index:100">
+<img src = "assets/img/publichealthlogo.png" height="100" >
+</div>
+</footer>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-4" style="background:;">
+  <hgroup>
+    <h2>Education</h2>
+    <hr>
+  </hgroup>
+  <article data-timings="">
+    
+<div style='float:left;width:48%;' class='centered'>
+  <ul>
+<li>MS in Mathematics with Specialization in Statistics</li>
+<li>2010</li>
+<li>South Dakota State University</li>
+</ul>
+
+</div>
+<div style='float:right;width:48%;'>
+  <p><center>
+<img src="./assets/img/sdsu-logo.jpg" style="height:400px">
+</center></p>
+
+</div>
+    
+    <footer class = 'logo'>
+<div style="position: absolute; left: 900px; top: 600px; z-index:100">
+<img src = "assets/img/publichealthlogo.png" height="100" >
+</div>
+</footer>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-5" style="background:;">
+  <hgroup>
+    <h2>Education</h2>
+    <hr>
+  </hgroup>
+  <article data-timings="">
+    
+<div style='float:left;width:48%;' class='centered'>
+  <ul>
+<li>Ph.D in Biostatistics</li>
+<li>2015</li>
+<li>Harvard University</li>
+</ul>
+
+</div>
+<div style='float:right;width:48%;'>
+  <p><center>
+<img src="./assets/img/hsph-logo.png" style="height:400px">
+</center></p>
+
+</div>
+    
+    <footer class = 'logo'>
+<div style="position: absolute; left: 900px; top: 600px; z-index:100">
+<img src = "assets/img/publichealthlogo.png" height="100" >
+</div>
+</footer>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="segue" id="slide-6" style="background:grey;">
+  <hgroup>
+    <h1>Questions</h1>
+    <hr>
+  </hgroup>
+  <article data-timings="">
+    
+    
+    <footer class = 'logo'>
+<div style="position: absolute; left: 900px; top: 600px; z-index:100">
+<img src = "assets/img/publichealthlogo.png" height="100" >
+</div>
+</footer>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Questions</h2>
+    <hr>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>For Questions during the talk</li>
+<li>Please go to: <a href="www.slido.com">www.slido.com</a></li>
+<li>Enter code: #D162</li>
+<li>Ask Questions and upvote ones already asked. </li>
+</ul>
+
+    
+    <footer class = 'logo'>
+<div style="position: absolute; left: 900px; top: 600px; z-index:100">
+<img src = "assets/img/publichealthlogo.png" height="100" >
+</div>
+</footer>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="segue" id="slide-8" style="background:grey;">
+  <hgroup>
+    <h1>Reproducible Research: What is it?</h1>
+    <hr>
+  </hgroup>
+  <article data-timings="">
+    
+    
+    <footer class = 'logo'>
+<div style="position: absolute; left: 900px; top: 600px; z-index:100">
+<img src = "assets/img/publichealthlogo.png" height="100" >
+</div>
+</footer>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Reproducible Research: What is it?</h2>
+    <hr>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li><a href="http://sepwww.stanford.edu/doku.php?id=sep:research:reproducible:seg92">Jon Claerbout</a> says</li>
+</ul>
+
+<blockquote>
+<p>An article about computational results is advertising, not scholarship. The actual scholarship is the full software environment, code and data, that produced the result.</p>
+</blockquote>
+
+    
+    <footer class = 'logo'>
+<div style="position: absolute; left: 900px; top: 600px; z-index:100">
+<img src = "assets/img/publichealthlogo.png" height="100" >
+</div>
+</footer>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Reproducible Research: What is it?</h2>
+    <hr>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li><a href="https://www.edge.org/response-detail/25340">Victoria Stodden</a> separated this out to:
+
+<ul>
+<li>Computational reproducibility: ability to reproduce code, computing environment and implementation</li>
+<li>Empirical reproducibility: Ability to reproduce a non-computational scientific study, need to know process and how data was collected. </li>
+<li>Statistical reproducibility: Detailed information on analysis and choice of tests.</li>
+</ul></li>
+</ul>
+
+    
+    <footer class = 'logo'>
+<div style="position: absolute; left: 900px; top: 600px; z-index:100">
+<img src = "assets/img/publichealthlogo.png" height="100" >
+</div>
+</footer>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Does this really matter?</h2>
+    <hr>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>Many articles have been written on this subject and continue to be written. </li>
+<li>This suggests importance but do we care?</li>
+</ul>
+
+    
+    <footer class = 'logo'>
+<div style="position: absolute; left: 900px; top: 600px; z-index:100">
+<img src = "assets/img/publichealthlogo.png" height="100" >
+</div>
+</footer>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Personal Example</h2>
+    <hr>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>Summer of 2011, first real data analysis performed by me. </li>
+<li>The analysis was performed in R and was then written into 3 different publications over the course of the next 2 years. </li>
+<li>When publications came back for revisions it was at least 1 year from time of analysis. </li>
+</ul>
+
+    
+    <footer class = 'logo'>
+<div style="position: absolute; left: 900px; top: 600px; z-index:100">
+<img src = "assets/img/publichealthlogo.png" height="100" >
+</div>
+</footer>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-13" style="background:;">
+  <hgroup>
+    <h2>Reproducing my own Work</h2>
+    <hr>
+  </hgroup>
+  <article data-timings="">
+    
+<div style='float:left;width:48%;' class='centered'>
+  <ul>
+<li>All data was saved in original files. </li>
+<li>All code was separated out for papers.</li>
+<li>Absolutely zero comments were made in this code. </li>
+<li>1 year later my R had dramatically changed. </li>
+</ul>
+
+</div>
+<div style='float:right;width:48%;'>
+  <p><center>
+<img src="./assets/img/facepalm.jpg" style="height:200px">
+</center></p>
+
+</div>
+    
+    <footer class = 'logo'>
+<div style="position: absolute; left: 900px; top: 600px; z-index:100">
+<img src = "assets/img/publichealthlogo.png" height="100" >
+</div>
+</footer>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>What happened?</h2>
+    <hr>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>I could not replicate my original tables. </li>
+<li>I could not follow the code I had written (Think of reading beginners writing)</li>
+<li>I had to redo all of the analysis and remember:
+
+<ul>
+<li>What was my inclusion criteria?</li>
+<li>What was my exclusion criteria?</li>
+<li>Why did I ever leave comments out????</li>
+</ul></li>
+</ul>
+
+    
+    <footer class = 'logo'>
+<div style="position: absolute; left: 900px; top: 600px; z-index:100">
+<img src = "assets/img/publichealthlogo.png" height="100" >
+</div>
+</footer>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>What issues can come about?</h2>
+    <hr>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>How was the data cleaned?</li>
+<li>What definitions were used? 
+
+<ul>
+<li>Age has many calculations which can be used. </li>
+<li>Was there any rounding or truncating before work was used?</li>
+</ul></li>
+</ul>
+
+    
+    <footer class = 'logo'>
+<div style="position: absolute; left: 900px; top: 600px; z-index:100">
+<img src = "assets/img/publichealthlogo.png" height="100" >
+</div>
+</footer>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Definitions Further Explored</h2>
+    <hr>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>Example: Medical Data with kids
+
+<ul>
+<li>Many times considering ages 1 to 18. </li>
+</ul></li>
+<li>Were events included for kids who entered the study at 17 but later vists were at 18? </li>
+<li>Was there rounding that included 6-11 month olds? </li>
+<li>How can you replicate even a simple sample size without knowing these things?</li>
+</ul>
+
+    
+    <footer class = 'logo'>
+<div style="position: absolute; left: 900px; top: 600px; z-index:100">
+<img src = "assets/img/publichealthlogo.png" height="100" >
+</div>
+</footer>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="segue" id="slide-17" style="background:grey;">
+  <hgroup>
+    <h1>Is there any hope?</h1>
+    <hr>
+  </hgroup>
+  <article data-timings="">
+    
+    
+    <footer class = 'logo'>
+<div style="position: absolute; left: 900px; top: 600px; z-index:100">
+<img src = "assets/img/publichealthlogo.png" height="100" >
+</div>
+</footer>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Is there any hope?</h2>
+    <hr>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>Modern tools are making at least 2 areas of reproducibility very easy:
+
+<ul>
+<li>Computational</li>
+<li>Statistical</li>
+</ul></li>
+<li>Many of these tools are free and already widely shared. </li>
+</ul>
+
+    
+    <footer class = 'logo'>
+<div style="position: absolute; left: 900px; top: 600px; z-index:100">
+<img src = "assets/img/publichealthlogo.png" height="100" >
+</div>
+</footer>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>What are these tools?</h2>
+    <hr>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>We will explore some of these tools:
+
+<ul>
+<li>RStudio Tools</li>
+<li>RCloud Social</li>
+<li>Github</li>
+</ul></li>
+</ul>
+
+    
+    <footer class = 'logo'>
+<div style="position: absolute; left: 900px; top: 600px; z-index:100">
+<img src = "assets/img/publichealthlogo.png" height="100" >
+</div>
+</footer>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="segue" id="slide-20" style="background:grey;">
+  <hgroup>
+    <h1>RStudio Tools</h1>
+    <hr>
+  </hgroup>
+  <article data-timings="">
+    
+    
+    <footer class = 'logo'>
+<div style="position: absolute; left: 900px; top: 600px; z-index:100">
+<img src = "assets/img/publichealthlogo.png" height="100" >
+</div>
+</footer>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>RMarkdown</h2>
+    <hr>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>Takes Markdown and combines it with the ability to run R code as well as:
+
+<ul>
+<li>Python</li>
+<li>C++</li>
+<li>Julia</li>
+<li>SQL</li>
+<li>etc.</li>
+</ul></li>
+<li>Can turn these into html, pdf and word documents.</li>
+<li>Simple to learn and very powerful. </li>
+</ul>
+
+    
+    <footer class = 'logo'>
+<div style="position: absolute; left: 900px; top: 600px; z-index:100">
+<img src = "assets/img/publichealthlogo.png" height="100" >
+</div>
+</footer>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Further RMarkdown</h2>
+    <hr>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>You can now generate:
+
+<ul>
+<li>Dashboards</li>
+<li>Textbooks</li>
+<li>Presentations (like this one)</li>
+<li>Widgets</li>
+<li>etc.</li>
+</ul></li>
+</ul>
+
+    
+    <footer class = 'logo'>
+<div style="position: absolute; left: 900px; top: 600px; z-index:100">
+<img src = "assets/img/publichealthlogo.png" height="100" >
+</div>
+</footer>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>R Projects</h2>
+    <hr>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>SAS and R Files used to start out similar :
+
+<ul>
+<li><code>LIBNAME libref ACCESS PATH=&#39;C:\PCFData\Demo.accdb&#39;;</code></li>
+<li><code>setwd(&#39;C:\PCFData\Demo.accdb&#39;)</code></li>
+</ul></li>
+<li>Why does this matter?</li>
+</ul>
+
+    
+    <footer class = 'logo'>
+<div style="position: absolute; left: 900px; top: 600px; z-index:100">
+<img src = "assets/img/publichealthlogo.png" height="100" >
+</div>
+</footer>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Setting Directories</h2>
+    <hr>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>Anytime you move folders your code won&#39;t work. </li>
+<li>No other computer other than yours can run this. </li>
+<li>Every person using your work must change these statements. </li>
+<li>In R this further is problem when using this syntax throughout the code to use new data. </li>
+</ul>
+
+    
+    <footer class = 'logo'>
+<div style="position: absolute; left: 900px; top: 600px; z-index:100">
+<img src = "assets/img/publichealthlogo.png" height="100" >
+</div>
+</footer>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-25" style="background:;">
+  <hgroup>
+    <h2>R Projects</h2>
+    <hr>
+  </hgroup>
+  <article data-timings="">
+    
+<div style='float:left;width:48%;' class='centered'>
+  <ul>
+<li>RStudio&#39;s Projects fix this for R</li>
+<li>Once a project is opened the working directory is set to the project base folder. </li>
+<li>Anyone can open this project and have the file system in place. </li>
+<li>If you move the folder the working directory changes automatically. </li>
+</ul>
+
+</div>
+<div style='float:right;width:48%;'>
+  <p><center>
+<img src="./assets/img/rproject.jpg" style="height:200px">
+</center></p>
+
+</div>
+    
+    <footer class = 'logo'>
+<div style="position: absolute; left: 900px; top: 600px; z-index:100">
+<img src = "assets/img/publichealthlogo.png" height="100" >
+</div>
+</footer>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>RStudio Server Strengths</h2>
+    <hr>
+  </hgroup>
+  <article data-timings="">
+    <p><center>
+<img src="./assets/img/rstudio-server.PNG" style="height:500px">
+</center></p>
+
+    
+    <footer class = 'logo'>
+<div style="position: absolute; left: 900px; top: 600px; z-index:100">
+<img src = "assets/img/publichealthlogo.png" height="100" >
+</div>
+</footer>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>RStudio Server</h2>
+    <hr>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>RStudio platform on a server.</li>
+<li>Both Free and Pro versions.</li>
+<li>Interface looks the same as desktop version. </li>
+</ul>
+
+    
+    <footer class = 'logo'>
+<div style="position: absolute; left: 900px; top: 600px; z-index:100">
+<img src = "assets/img/publichealthlogo.png" height="100" >
+</div>
+</footer>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>RStudio Server Strengths</h2>
+    <hr>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>Single Management of Software can minimize bugs</li>
+<li>Do not need a powerful individual computer. </li>
+<li>Can actually use Chromebooks. </li>
+<li>Easily interface through web browswer. </li>
+</ul>
+
+    
+    <footer class = 'logo'>
+<div style="position: absolute; left: 900px; top: 600px; z-index:100">
+<img src = "assets/img/publichealthlogo.png" height="100" >
+</div>
+</footer>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>RStudio Server Strengths</h2>
+    <hr>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>With Pro Version
+
+<ul>
+<li>SSL Encryption</li>
+<li>Custom user load limits</li>
+<li>Work on shared projects in real time (like google docs)</li>
+</ul></li>
+</ul>
+
+    
+    <footer class = 'logo'>
+<div style="position: absolute; left: 900px; top: 600px; z-index:100">
+<img src = "assets/img/publichealthlogo.png" height="100" >
+</div>
+</footer>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>RStudio Server Strengths</h2>
+    <hr>
+  </hgroup>
+  <article data-timings="">
+    <p><center>
+<img src="./assets/img/rstudio-dash.PNG" style="height:500px">
+</center></p>
+
+    
+    <footer class = 'logo'>
+<div style="position: absolute; left: 900px; top: 600px; z-index:100">
+<img src = "assets/img/publichealthlogo.png" height="100" >
+</div>
+</footer>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>RStudio Server Weaknesses</h2>
+    <hr>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>Need to be connected to internet or network. </li>
+<li>Need to have individuals that can host a server and manage it. </li>
+<li>R and Linux can be a pain for many packages.</li>
+<li>Cost - $10k for pro per year (Still Cheaper than SAS)</li>
+</ul>
+
+    
+    <footer class = 'logo'>
+<div style="position: absolute; left: 900px; top: 600px; z-index:100">
+<img src = "assets/img/publichealthlogo.png" height="100" >
+</div>
+</footer>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>RCloud Social</h2>
+    <hr>
+  </hgroup>
+  <article data-timings="">
+    <p><center>
+<img src="./assets/img/rcloud-social.PNG" style="height:500px">
+</center></p>
+
+    
+    <footer class = 'logo'>
+<div style="position: absolute; left: 900px; top: 600px; z-index:100">
+<img src = "assets/img/publichealthlogo.png" height="100" >
+</div>
+</footer>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>RStudio Cloud</h2>
+    <hr>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>RStudio server hosted by RStudio </li>
+<li>Still very new </li>
+<li>Can be slow</li>
+<li>Good to share work or onboard students. </li>
+</ul>
+
+    
+    <footer class = 'logo'>
+<div style="position: absolute; left: 900px; top: 600px; z-index:100">
+<img src = "assets/img/publichealthlogo.png" height="100" >
+</div>
+</footer>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>RCloud Social</h2>
+    <hr>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>Social Environment used for code and data visualizations</li>
+<li>Open Source - all on github</li>
+<li>Can use R or Python</li>
+<li>Dashboards, markdown documents, html widgets, ...</li>
+<li>Written and used extensively by ATT (Bell Labs)</li>
+</ul>
+
+    
+    <footer class = 'logo'>
+<div style="position: absolute; left: 900px; top: 600px; z-index:100">
+<img src = "assets/img/publichealthlogo.png" height="100" >
+</div>
+</footer>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>RCloud Social</h2>
+    <hr>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>Can be run on desktop or server</li>
+<li>Easily works with Spark </li>
+<li>Public and Private Instances allowed.</li>
+<li>Directly connected to github</li>
+</ul>
+
+    
+    <footer class = 'logo'>
+<div style="position: absolute; left: 900px; top: 600px; z-index:100">
+<img src = "assets/img/publichealthlogo.png" height="100" >
+</div>
+</footer>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="#id" style="background:;">
+  <hgroup>
+    <h2>RCloud Strengths</h2>
+    <hr>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>Completely Free</li>
+<li>ATT is constanly updating along with others</li>
+<li>Active User Community</li>
+<li>Versioning/Forking</li>
+<li>Reporting Dashboard</li>
+</ul>
+
+    
+    <footer class = 'logo'>
+<div style="position: absolute; left: 900px; top: 600px; z-index:100">
+<img src = "assets/img/publichealthlogo.png" height="100" >
+</div>
+</footer>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>RCloud Weaknesses</h2>
+    <hr>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>Only open source support</li>
+<li>Need to be more proficient in R:
+
+<ul>
+<li>Not as easy to load date.</li>
+<li>Not as easy to install packages. </li>
+<li>Not as easy to </li>
+</ul></li>
+</ul>
+
+    
+    <footer class = 'logo'>
+<div style="position: absolute; left: 900px; top: 600px; z-index:100">
+<img src = "assets/img/publichealthlogo.png" height="100" >
+</div>
+</footer>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Github</h2>
+    <hr>
+  </hgroup>
+  <article data-timings="">
+    <p><center>
+<img src="./assets/img/github.PNG" style="height:500px">
+</center></p>
+
+    
+    <footer class = 'logo'>
+<div style="position: absolute; left: 900px; top: 600px; z-index:100">
+<img src = "assets/img/publichealthlogo.png" height="100" >
+</div>
+</footer>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Github</h2>
+    <hr>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>Uses <code>git</code> language to version control</li>
+<li>Save you from bad workflow:
+
+<ul>
+<li><code>my-thesis.doc</code></li>
+<li><code>my-thesis-v1.doc</code></li>
+<li><code>my-thesis-v1-comments-sullivan.doc</code></li>
+<li><code>my-thesis-v1-this-is-so-bad.doc</code></li>
+</ul></li>
+</ul>
+
+    
+    <footer class = 'logo'>
+<div style="position: absolute; left: 900px; top: 600px; z-index:100">
+<img src = "assets/img/publichealthlogo.png" height="100" >
+</div>
+</footer>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Github: Pros</h2>
+    <hr>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>Easy to use tools for all systems</li>
+<li>Directly connects to RStudio and RCloud Social</li>
+<li>Used by many computer programmers, statisticians, data scientists, analysts, ...</li>
+<li>Excellent community and professional support</li>
+</ul>
+
+    
+    <footer class = 'logo'>
+<div style="position: absolute; left: 900px; top: 600px; z-index:100">
+<img src = "assets/img/publichealthlogo.png" height="100" >
+</div>
+</footer>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Github Cons</h2>
+    <hr>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>Difficult Onboarding</li>
+<li>Github Classroom needs a lot of work. </li>
+<li><code>git</code> can be a pain. </li>
+<li>Have to pay for private files</li>
+</ul>
+
+    
+    <footer class = 'logo'>
+<div style="position: absolute; left: 900px; top: 600px; z-index:100">
+<img src = "assets/img/publichealthlogo.png" height="100" >
+</div>
+</footer>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Questions</h2>
+    <hr>
+  </hgroup>
+  <article data-timings="">
+    <p><center>
+<img src="./assets/img/sadie.jpg" style="height:500px">
+</center></p>
+
+    
+    <footer class = 'logo'>
+<div style="position: absolute; left: 900px; top: 600px; z-index:100">
+<img src = "assets/img/publichealthlogo.png" height="100" >
+</div>
+</footer>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+    <slide class="backdrop"></slide>
+  </slides>
+  <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
+    <ul>
+      <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=1 title='About Me'>
+         1
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=2 title='NA'>
+         2
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=3 title='Education'>
+         3
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title='Education'>
+         4
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=5 title='Education'>
+         5
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=6 title='Questions'>
+         6
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=7 title='Questions'>
+         7
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=8 title='Reproducible Research: What is it?'>
+         8
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=9 title='Reproducible Research: What is it?'>
+         9
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=10 title='Reproducible Research: What is it?'>
+         10
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=11 title='Does this really matter?'>
+         11
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=12 title='Personal Example'>
+         12
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=13 title='Reproducing my own Work'>
+         13
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=14 title='What happened?'>
+         14
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=15 title='What issues can come about?'>
+         15
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=16 title='Definitions Further Explored'>
+         16
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=17 title='Is there any hope?'>
+         17
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=18 title='Is there any hope?'>
+         18
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=19 title='What are these tools?'>
+         19
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=20 title='RStudio Tools'>
+         20
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=21 title='RMarkdown'>
+         21
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=22 title='Further RMarkdown'>
+         22
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=23 title='R Projects'>
+         23
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=24 title='Setting Directories'>
+         24
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=25 title='R Projects'>
+         25
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=26 title='RStudio Server Strengths'>
+         26
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=27 title='RStudio Server'>
+         27
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=28 title='RStudio Server Strengths'>
+         28
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=29 title='RStudio Server Strengths'>
+         29
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=30 title='RStudio Server Strengths'>
+         30
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=31 title='RStudio Server Weaknesses'>
+         31
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=32 title='RCloud Social'>
+         32
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=33 title='RStudio Cloud'>
+         33
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=34 title='RCloud Social'>
+         34
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=35 title='RCloud Social'>
+         35
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=36 title='RCloud Strengths'>
+         36
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=37 title='RCloud Weaknesses'>
+         37
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=38 title='Github'>
+         38
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=39 title='Github'>
+         39
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=40 title='Github: Pros'>
+         40
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=41 title='Github Cons'>
+         41
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=42 title='Questions'>
+         42
+      </a>
+    </li>
+  </ul>
+  </div>  <!--[if IE]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
+    </script>
+    <script>CFInstall.check({mode: 'overlay'});</script>
+  <![endif]-->
+</body>
+  <!-- Load Javascripts for Widgets -->
+  <script src="libraries/widgets/quiz/js/jquery.quiz.js"></script>
+<script src="libraries/widgets/quiz/js/mustache.min.js"></script>
+<script src="libraries/widgets/quiz/js/quiz-app.js"></script>
+<script src="libraries/widgets/bootstrap/js/bootstrap.min.js"></script>
+<script src="libraries/widgets/bootstrap/js/bootbox.min.js"></script>
+<script src="libraries/widgets/interactive/js/ace/js/ace.js"></script>
+<script src="libraries/widgets/interactive/js/opencpu-0.5.js"></script>
+<script src="libraries/widgets/interactive/js/interactive.js"></script>
+
+  <!-- MathJax: Fall back to local if CDN offline but local image fonts are not supported (saves >100MB) -->
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [['$','$'], ['\\(','\\)']],
+        processEscapes: true
+      }
+    });
+  </script>
+  <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/2.0-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  <!-- <script src="https://c328740.ssl.cf1.rackcdn.com/mathjax/2.0-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script> -->
+  <script>window.MathJax || document.write('<script type="text/x-mathjax-config">MathJax.Hub.Config({"HTML-CSS":{imageFont:null}});<\/script><script src="libraries/widgets/mathjax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"><\/script>')
+</script>
+<script>  
+  $(function (){ 
+    $("#example").popover(); 
+    $("[rel='tooltip']").tooltip(); 
+  });  
+  </script>  
+  <!-- LOAD HIGHLIGHTER JS FILES -->
+  <script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <!-- DONE LOADING HIGHLIGHTER JS FILES -->
+   
+  </html>

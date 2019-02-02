@@ -1,0 +1,211 @@
+---
+title: "PHP 2511: Applied Regression"
+author: Adam J Sullivan
+fontsize: 10pt
+output:
+ beamer_presentation:
+    template: svm-latex-beamer.tex
+    keep_tex: false
+    #toc: true
+ slide_level: 4
+---
+
+
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(cache=FALSE, dev='pdf')
+mon <- as.Date("2017-01-23")
+# fri <- as.Date("2016-01-08")
+
+advdate <- function(obj, adv) {
+ tmon <- obj + 7*(adv-1)
+ tfri <- obj + 4 + 7*(adv-1)
+ tmon <- format(tmon, format="%m/%d")
+ tfri <- format(tfri, format="%m/%d")
+ zadv <- sprintf("%02d", adv)
+ tmp <- paste("Week ",zadv,sep='',", ", tmon," - ",tfri)
+ return(tmp)
+}
+
+library(RefManageR)
+# library(knitcitations)
+# library(rcrossref)
+bib <- ReadBib("C:/Users/adam_/Dropbox/Brown/PHP2511/Spring2017/Syllabus/bib.bib")
+myopts <- BibOptions(bib.style = "authoryear", style="latex", first.inits=FALSE, max.names = 20)
+```
+
+
+# Syllabus
+
+
+## Description
+
+
+
+- This course provides a survey of regression techniques for outcomes common in public health data including continuous, binary, count and survival data.  
+- Emphasis is on developing a conceptual understanding of the application of these techniques to solving problems, rather than to the numerical details. 
+- Extensive use of the computer will be made for analysis of datasets.
+
+## Description
+
+- This course is designed for graduate and advanced undergraduate students who will be analyzing data with scientific colleagues and who want to develop a practical hands-on toolkit and gain experience in distilling complex statistical information into formats understandable to colleagues. 
+- This course will feature R programming elements. To make the most of R students will be expected to use \href{https://www.rstudio.com/}{RStudio}. 
+
+##  Recommended Textbooks
+
+```{r, echo = FALSE, results="asis", warning=FALSE} 
+bib["regression"]
+``` 
+
+```{r, echo = FALSE, results="asis", warning=FALSE}  
+bib["sheather"]
+```
+
+
+## Course Objectives
+
+1. Recognize when data should be analyzed by regression
+2. Plan an appropriate analysis
+3. Bring in, Clean and Analyze data with R. 
+4. Coherently summarize results. 
+
+
+## Overall Course Expectations
+
+Students in this course will be expected to do the following:
+
+1. Attend all lectures and actively participate in discussion. 
+
+2. Read all assigned material *prior* to coming to class and actively participate in class discussions. 
+
+3. Complete and turn in all assignments on time. Solutions to homework must be clearly written with appropriate tables and figures included. 
+
+4. Demonstrate an understanding on material on examinations. 
+
+5. Respect each other, each others questions and each others discussion. 
+
+
+## Evaluation
+
+Students will be evaluated based on:
+
+
+-------------------------------------------------
+Grade Category          Percentage
+---------------------- ---------------------------------
+Participation           10\%
+
+Homework                20\%
+
+Exam 1 (03/13/2017)     20\%
+
+Exam 2 (05/17/2017)     20\%
+
+Final Project           30\%
+--------------------------------------------------
+
+
+## Participation
+
+- This course will move very fast and it is crucial to success in the course that students attend and participate. 
+- Many classes will have polls or quizzes that will not be graded for having the most correct or best answer but for participating. 
+- Unexcused absences will result in a loss of percentage points. 
+
+
+## Homework
+
+- Weekly assignments will be given out to students. 
+- Assignments will require data handling, data cleaning and interpretation of the results.  
+- It is expected that all assignments are completed on time. No late assignments will be accepted. 
+- Students will also be graded on the conciseness and quality of work. 
+- Turning in many pages of just computer code and output will affect the grade in a negative fashion.
+
+
+## Exam 1 (March 13, 2017)
+
+- An in class exam will be given. Students will be expected to interpret and analyze regression models. 
+- Students will also be expected to understand conceptual ideas. 
+
+## Exam  2 (May 17, 2017 at 2:00pm)
+
+- An in class exam will be given. Students will be expected to interpret and analyze regression models. 
+- Students will also be expected to understand conceptual ideas. 
+
+## Final Project
+
+The individual part of the project will require:
+
+1. Asking a relevant public Health question. 
+2. Identify available data to answer this question. 
+3. Model the question with appropriate statistical models. 
+4. Write up a report with appropriate tables, graphs and results. 
+
+
+## Final Project Continued
+The Group part of the project will require
+
+1. Constructive Criticism of Group members Projects based on Course Content. 
+2. In depth review of group members work. 
+
+## Semester Hours
+
+Over the course of the semester students will spend at least the amounts of time shown below:
+
+\begin{center}
+\begin{tabular}{ l c }
+Task & Hours Spent on Task \\ \hline\hline
+Class Time       &      40\\
+
+Homework/Class Preparation         &       90\\
+
+
+
+Exams/Prep  & 25\\
+
+Final Project & 25 \\\hline
+
+
+Total & 180\\
+\end{tabular} 
+\end{center}
+
+
+
+##Diversity Statement
+
+- This course is designed to support an inclusive learning environment where diverse perspectives are recognized, respected and seen as a source of strength. 
+- It is our intent to provide materials and activities that are respectful of various levels of diversity: mathematical background, previous computing skills, gender, sexuality, disability, age, socioeconomic status, ethnicity, race, and culture.  
+
+# R and R Studio
+
+
+## RStudio Server
+
+- All students will have access to  [Rstudio Server](rstudio.sullivanstatistics.com) 
+- This server will make it easy for these reasons
+    - All required packages are loaded.
+    - You can access R through a webbrowser and do not need it on your computer.
+    - If your analysis takes a long time you can close the browser and come back later. 
+    
+## What is RStudio?
+
+- RStudio is a graphical user interface to R. 
+- It allows for R to look similar to Stata or SAS.
+
+## Why would we use RStudio?
+
+- Allows for easier use of R.
+- Allows for simple access to loading and viewing data. 
+- Allows for simple viewing of help and graphics. 
+- Allows for you to include R code, graphics and typing into a document that you can export to word, html or pdf.
+
+## RMarkdown
+
+- In this class you will be expected to do things in R and will be using RMarkdown to incorporate your code and results into a document. 
+- RMarkdown is a language that can take R code, Graphics, Text and export this as a word, html or pdf document. 
+
+
+## Getting started with RMarkdown
+
+- In the server from here on out. 
